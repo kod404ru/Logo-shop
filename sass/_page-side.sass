@@ -1,0 +1,304 @@
+.page__side 
+  flex: 0 0 260px
+
+.side-menu 
+  position: relative
+  background: url(../img/aside/bg-aside.jpg)no-repeat center / cover
+  margin: 0 0 44px
+
+.side-menu__header 
+  display: flex
+  align-items: center
+  padding: 12px 20px
+
+.side-menu__title 
+  color: #fff
+  font-family: $thffm
+  font-size: 30px
+  text-transform: uppercase
+  letter-spacing: 0.75px
+  line-height: 1.2
+
+.side-menu__burger 
+  flex: 0 0 36px
+  height: 36px
+  background: $darkBlue
+  position: relative
+  cursor: pointer
+  span 
+    width: 24px 
+    height: 2px 
+    background: white
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    &:first-child
+      top: 10px
+    &:last-child
+      bottom: 10px
+    &:nth-child(2)
+      top: 50%
+      transform: translate(-50%, -50%)
+
+.side-menu__burger.active
+  span
+    &:first-child
+      transform: translate(-50%,7px) rotate(45deg)
+    &:nth-child(2)
+      display: none
+    &:last-child 
+      transform: translate(-50%,-7px) rotate(-45deg)
+
+.side-menu__body-wrap
+
+.side-menu__body 
+  display: none
+
+.side-menu__body.active
+  display: block
+
+.side-menu__list 
+  li.active 
+    background: url(../img/aside/icons/arrow.png)no-repeat right 10px center $darkBlue
+  li:not(:last-child)
+    border-bottom: 1px solid #1aa7b9
+
+.side-menu__link 
+  color: #fff
+  display: block
+  font-size: 12px
+  font-weight: 300
+  letter-spacing: 0.3px
+  line-height: 3.33
+  padding: 0 22px
+  @media (min-width: 992.98px)
+    &:hover
+      background: $darkBlue
+
+.side-menu__link--parent 
+  background: url(../img/aside/icons/arrow.png)no-repeat right 10px center
+  @media (min-width: 992.98px)
+    &:hover
+      background: url(../img/aside/icons/arrow.png)no-repeat right 10px center $darkBlue
+
+
+//modal window for submenu=====================================
+.side-menu__submenu 
+  position: absolute
+  z-index: 10
+  top: 0
+  left: 100%
+  min-height: 100%
+  width: 280px
+  border: 2px solid $darkBlue
+  border-left: none
+  opacity: 0
+  visibility: hidden
+  transition: all .3s linear
+  background: white 
+
+.side-menu__submenu.active
+  visibility: visible
+  opacity: 1
+  transition: all .3s linear
+
+.side-menu__nav
+  padding: 20px 0
+  border-bottom: 1px solid #dedede
+  margin: 0 0 15px
+  li
+    @media (min-width: 992.98px)
+      &:hover
+        background: $blue
+
+.side-menu__nav-link
+  color: $blue
+  font-size: 12px
+  font-weight: 300
+  line-height: 3
+  display: block
+  letter-spacing: 0.3px
+  padding: 0 35px
+  @media (min-width: 992.98px)
+    &:hover
+      color: $white
+
+.side-menu__lot 
+  padding: 11px 30px 15px 25px
+
+.lot__img 
+  position: relative
+  margin: 0 0 20px
+  width: 100%
+  img
+    max-width: 100%
+
+.lot__label
+  padding: 0 0 0 3px
+  margin: 0 0 16px
+  color: $white
+  font-weight: 900
+  text-transform: uppercase
+  background: $orange
+  padding: .4em 1em
+  border-radius: 1em
+  position: absolute
+  top: -10px
+  left: 0
+
+.lot__title 
+  margin: 0 0 31px
+  a 
+    color: $darkBlue
+    font-size: 16px
+    font-weight: 300
+    line-height: 1.5
+    @media (min-width: 992.98px)
+      &:hover
+        text-decoration: underline
+
+.lot__bottom 
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  align-items: center
+
+.lot__old-price
+  flex: 0 0 100%
+  text-align: right
+  color: #999
+  font-size: 18px
+  text-decoration: line-through
+  background: url(../img/aside/icons/ruble-gray.png)no-repeat right bottom 3px
+  padding: 0 10px 0 0
+
+.lot__cart 
+
+.lot__price 
+  color: $black
+  font-size: 24px
+  font-weight: 900
+  padding: 0 15px 0 0
+  background: url(../img/aside/icons/ruble.png)no-repeat right center
+
+
+//news===============================================================
+
+.sideNews 
+  margin: 0 0 30px
+
+.sideNews__title
+  margin: 0 0 30px
+
+.sideMenu__title 
+  color: #dadada
+  font-family: $thffm
+  font-size: 30px
+  text-transform: uppercase
+  letter-spacing: 0.75px
+  @media (min-width: 992.98px)
+    &:hover
+      color: #1ab9ce
+      transition: all .3s linear
+      cursor: pointer
+
+.sideNews__unit 
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  margin: 0 0 47px
+
+.sideNews__unitTitle 
+  font-size: 12px
+  font-weight: 900
+  line-height: 1.5
+  text-transform: uppercase
+  margin: 0 0 22px
+  flex: 0 0 100%
+  a 
+    color: #333
+    @media (min-width: 992.98px)
+      &:hover
+        color: $orange
+        transition: all .2s linear
+
+
+.sideNews__unitDate 
+  color: #d8d8d8
+  font-size: 24px
+  font-weight: 900
+  span
+    font-weight: 300
+    font-size: 18px
+    display: block
+
+.sideNews__unitDescription 
+  font-size: 12px
+  font-weight: 300
+  line-height: 1.5
+  flex: 0 0 80%
+  a 
+    color: #666
+
+//reviews===========================================================================
+
+.sideReviews 
+
+.sideReviews__title 
+  margin: 0 0 25px
+
+.sideReviews__unit 
+  margin: 0 0 20px
+  &:last-child
+    margin: 0 0 40px
+
+.sideReviews__unitHead 
+  display: flex
+  justify-content: space-between
+
+.headUnit
+  margin: 0 0 10px 
+
+.headUnit__name 
+  font-size: 12px
+  font-weight: 900
+  line-height: 1.5
+  text-transform: uppercase
+  a 
+    color: #333
+  @media (min-width: 992.98px)
+    a
+      &:hover
+        color: #1ab9ce
+        transition: all .2s linear
+
+.headUnit__date 
+  color: #999
+  font-size: 12px
+  font-weight: 300
+
+.sideReviews__unitBody 
+  font-size: 12px
+  font-weight: 300
+  line-height: 1.5
+  a 
+    display: block
+    padding: 15px 12px 15px 33px
+    color: #666
+    position: relative
+    &:before
+      content: ''
+      height: 16px
+      width: 16px
+      background: url(../img/aside/icons/quotes.png)no-repeat
+      position: absolute
+      top: 19px
+      left: 8px
+    @media (min-width: 992.98px)
+      &:hover
+        background-color: #1ab9ce
+        color: white
+        transition: all .2s linear
+        &:before 
+          background: url(../img/aside/icons/quotesBlue.png)no-repeat
+      

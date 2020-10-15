@@ -1,0 +1,127 @@
+.page__slider 
+
+.sliderPage__item 
+  background: url(../img/pageSlider/sliderPic.jpg)no-repeat center / cover
+  padding: 20px 35px
+
+.sliderPage__title 
+  color: #f68038
+  font: 900 48px/0.9 $ffm
+  text-transform: uppercase
+  margin: 0 0 53px
+  span
+    color: #333
+    display: block
+
+.sliderPage__info 
+  color: #333
+  text-transform: uppercase
+  font: 900 14px/1.71 $ffm
+
+.sliderPage__infoLine--1 
+  span 
+    font-size: 18px
+    color: #f68038
+
+.sliderPage__infoLine--2 
+  margin: 0 0 2px
+  span 
+    color: #fff
+    display: inline-block 
+    background: #959593
+    padding: 5px 8px
+
+.sliderPage__infoLine--3 
+  span 
+    color: #979797
+
+.sliderPage__price 
+  text-align: center
+  margin: 0 0 25px
+  span 
+    color: #fff
+    text-transform: uppercase
+    font: 900 36px/.67 $ffm
+    text-transform: lowercase
+    &:after
+      content: ''
+      display: inline-block
+      height: 24px
+      width: 20px
+      background: url(../img/pageSlider/icons/ruble.png)no-repeat 
+      margin: 0 0 0 5px
+
+.sliderPage__link
+  text-align: center 
+  margin: 0 0 58px
+
+.sliderPage__linkItem 
+  color: #fff
+  text-transform: uppercase
+  font: 900 14px/1.71 $ffm
+  span 
+    border: 3px solid #fff
+    padding: 7px 10px 7px 15px
+    border-radius: 1.3em
+    &:after
+      content: ''
+      display: inline-block
+      height: 14px
+      width: 14px
+      background: url(../img/pageSlider/icons/arrowRight.png)no-repeat center
+      transform: translateY(2px)
+      margin: 0 0 0 12px
+    @media (min-width: 992.98px)
+      &:hover
+        background: $orange
+        transition: all .3s linear
+
+.sliderPage
+  margin: 0 0 50px
+  overflow: hidden
+  position: relative
+  padding: 0 0 25px
+  width: 100%
+  max-width: 900px
+  .slick-list
+    // overflow: hidden
+  .slick-track
+    display: flex
+  .slick-dots
+    display: flex
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    li 
+      margin: 0 45px 0 0
+      button
+        width: 55px
+        height: 55px
+        border-radius: 50%
+        border: 4px solid white
+        color: #fffefe
+        font-size: 0
+        font-weight: 900
+    li:nth-child(1)
+      button 
+        background: url(../img/pageSlider/p4.jpg)no-repeat center / cover
+    li:nth-child(2)
+      button 
+        background: url(../img/pageSlider/p2.jpg)no-repeat center / cover
+    li:nth-child(3)
+      button 
+        background: url(../img/pageSlider/p3.jpg)no-repeat center / cover
+    li:nth-child(4)
+      button 
+        background: url(../img/pageSlider/p4.jpg)no-repeat center / cover
+    li:nth-child(5)
+      margin: 0
+      button 
+        background: url(../img/pageSlider/p5.jpg)no-repeat center / cover
+
+.sliderPage
+  li.slick-active
+    button 
+      background: $orange !important
+      font-size: 16px  

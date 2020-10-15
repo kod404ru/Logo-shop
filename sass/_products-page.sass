@@ -1,0 +1,130 @@
+.page__products 
+  
+.products-page
+  position: relative
+  padding: 55px 0 0
+
+.products-page__title
+  color: #dadada
+  font-family: $thffm
+  font-size: 36px
+  text-transform: uppercase
+  letter-spacing: 0.9px
+  position: absolute
+  top: 0
+  left: 0
+
+.products-page__slider 
+
+.products-page__slider-item 
+  display: flex
+  flex-flow: row wrap
+  margin: 0 -15px
+
+.products-page__lot-wrapper
+  flex: 0 0 33.333%
+  padding: 0 15px
+  margin: 0 0 30px
+
+.products-page__lot
+  padding: 25px 17px
+  position: relative
+  border: 1px solid lightgray
+  &:hover 
+    .lot__backface
+      opacity: 1
+      visibility: visible
+      transition: all .4s linear
+
+.products-page__lot-wrapper
+  .lot__img
+    height: 175px
+    overflow: hidden
+
+.products__lot-title
+
+.lot__backface 
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, .8)
+  border: 5px solid #f68038
+  padding: 20px 17px
+  display: block
+  opacity: 0
+  visibility: hidden
+  cursor: pointer
+
+.lot__backface-top 
+
+.lot__top-title 
+  color: #ffffff
+  font: 900 16px/1 $ffm
+  margin: 0 0 7px
+
+.lot__top-subtitle
+  color: #c2c2c2
+  font-family: Roboto
+  font-weight: 300
+  margin: 0 0 29px
+
+.lot__backface-middle 
+  color: #ffffff
+  font-size: 14px
+  margin: 0 0 25px
+  span
+    color: #f68038
+    font-weight: 900
+    display: block
+    margin: 3px 0 10px
+
+.lot__backface-cart
+  text-align: center
+  margin: 0 0 28px
+
+.lot__backface-bottom
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+
+.lot__bottom-old-price 
+  flex: 0 1 100%
+  text-align: right 
+  margin: 0 0 12px
+  color: #999999
+  font-size: 18px
+  font-weight: 300
+  text-decoration: line-through
+  span 
+    &:after
+      content: ''
+      display: inline-block
+      height: 10px
+      width: 6px
+      background: url(../img/products/icons/ruble-small.png)no-repeat
+      margin: 0 0 0 2px
+
+.lot__bottom-label 
+  color: #f68038
+  font-size: 14px
+  font-weight: 300
+  text-transform: lowercase
+  background: white
+  padding: .4em .5em
+  border-radius: 1em
+
+.lot__bottom-price 
+  color: #ffffff
+  font-size: 24px
+  font-weight: 900
+  span 
+    &:after
+      content: ''
+      display: inline-block
+      height: 13px
+      width: 12px
+      background: url(../img/products/icons/ruble-big.png)no-repeat
+      margin: 0 0 0 3px
+
